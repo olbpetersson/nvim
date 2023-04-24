@@ -7,7 +7,7 @@ vim.opt.autochdir = true
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
-vim.keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>")
+vim.keymap.set("n", "<leader>t", ":NvimTreeFindFile<CR>")
 
 
 
