@@ -3,7 +3,8 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2 
 vim.opt.expandtab = true
 
-vim.opt.autochdir = true
+-- vim.opt.autochdir = true
+vim.w.clipboard = unnamedplus
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 

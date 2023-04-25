@@ -48,8 +48,8 @@ return require('packer').startup(function(use)
   }
 
   -- colorscheme --
-  use "rebelot/kanagawa.nvim"
-  
+  use { "catppuccin/nvim", as = "catppuccin" }
+ 
   -- nvim-tree for file tree -- 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -90,6 +90,11 @@ return require('packer').startup(function(use)
   }
   -- better escape for jk in insert mode to escape --
   use {'jdhao/better-escape.vim', event = 'InsertEnter'}
+
+  -- tabs --
+  use 'nvim-tree/nvim-web-devicons'
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

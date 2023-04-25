@@ -1,6 +1,5 @@
-print("hello")
 vim.g.mapleader = ','
-vim.cmd("colorscheme kanagawa")
+vim.cmd.colorscheme "catppuccin-frappe"
 
 -- Disabled for nvim-tree --
 vim.g.loaded_netrw = 1
