@@ -12,5 +12,3 @@ vim.opt.number = true
 
 require("packer_plugins")
 require("keymap")
-require("mason").setup()
-

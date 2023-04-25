@@ -95,6 +95,19 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
+  -- null-ls linting -- 
+  use {
+    "jay-babu/mason-null-ls.nvim",
+    requires = {
+      "williamboman/mason.nvim",
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+  }
+
+
+
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
