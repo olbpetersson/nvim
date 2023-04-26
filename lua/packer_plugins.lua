@@ -57,7 +57,11 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional
     },
     config = function()
-      require("nvim-tree").setup {}
+      require("nvim-tree").setup {
+        filters = {
+          exclude = { "node_modules" }
+        }
+      }
     end
   }
 
@@ -110,12 +114,33 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
 
+  -- auto close tags --
   use {
     "windwp/nvim-ts-autotag",
     requires = "nvim-treesitter",
     event = "InsertEnter",
   }
   
+  -- multi-line visual editing --
+  use {
+    'mg979/vim-visual-multi',
+  }
+
+  -- move rows and words --
+  use 'fedepujol/move.nvim'
+
+  -- surround --
+  use({
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+      config = function()
+          require("nvim-surround").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+  })
+
+ 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
