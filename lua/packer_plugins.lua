@@ -49,8 +49,11 @@ return require('packer').startup(function(use)
 
   -- colorscheme --
   use { "catppuccin/nvim", as = "catppuccin" }
- 
-  -- nvim-tree for file tree -- 
+
+  -- icons --
+  use 'nvim-tree/nvim-web-devicons'
+
+  -- nvim-tree for file tree --
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -68,7 +71,10 @@ return require('packer').startup(function(use)
   -- lua line for status line --
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+    config = function()
+      require('lualine').setup()
+    end
   }
 
   -- lsp-zero for cmp, nulls and mason for lsp installation --
@@ -96,10 +102,9 @@ return require('packer').startup(function(use)
   use {'jdhao/better-escape.vim', event = 'InsertEnter'}
 
   -- tabs --
-  use 'nvim-tree/nvim-web-devicons'
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
-  -- null-ls linting -- 
+  -- null-ls linting --
   use {
     "jay-babu/mason-null-ls.nvim",
     requires = {
@@ -120,14 +125,11 @@ return require('packer').startup(function(use)
     requires = "nvim-treesitter",
     event = "InsertEnter",
   }
-  
+
   -- multi-line visual editing --
   use {
     'mg979/vim-visual-multi',
   }
-
-  -- move rows and words --
-  use 'fedepujol/move.nvim'
 
   -- surround --
   use({
@@ -140,7 +142,7 @@ return require('packer').startup(function(use)
       end
   })
 
- 
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
