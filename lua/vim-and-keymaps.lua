@@ -40,13 +40,15 @@ vim.keymap.set('n','<A-S-q>', ':BufferRestore<CR>', { silent = true })
 -- custom --
 vim.keymap.set('n', '<C-s>', ':w<CR>', { silent = true })
 vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { silent = true })
+vim.keymap.set('n', '<C-q>', ':q<CR>', { silent = true })
 
 vim.keymap.set('n', '<A-Left>', ':winc h<CR>', { silent = true })
 vim.keymap.set('n', '<A-Right>', ':winc l<Cr>', { silent = true })
 vim.keymap.set('n', '<A-h>', ':winc h<CR>', { silent = true })
 vim.keymap.set('n', '<A-l>', ':winc l<Cr>', { silent = true })
-vim.keymap.set('n', '<A-S-l>', ':1 winc ><Cr>', { silent = true })
-vim.keymap.set('n', '<A-S-h>', ':1 winc <<Cr>', { silent = true })
+vim.keymap.set('n', '<A-S-.>', ':1 winc ><Cr>', { silent = true })
+vim.keymap.set('n', '<A-S-,>', ':1 winc <<Cr>', { silent = true })
+vim.keymap.set('n', '<A-.>', ':vsplit <Cr>', { silent = true })
 
 vim.keymap.set('n', '<A-S-Up>', ':m .-2<CR>', { silent = true })
 vim.keymap.set('n', '<A-S-Down>', ':m .+1<CR>', { silent = true })
