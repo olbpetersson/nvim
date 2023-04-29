@@ -37,6 +37,9 @@ vim.keymap.set('n', '<C-l>', ':BufferNext<CR>', { silent = true })
 vim.keymap.set('n', '<A-q>', ':BufferClose<CR>', { silent = true })
 vim.keymap.set('n','<A-S-q>', ':BufferRestore<CR>', { silent = true })
 
+-- lsp-zero / null-ls / lsp --
+vim.keymap.set('n', '<C-p>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+
 -- custom --
 vim.keymap.set('n', '<C-s>', ':w<CR>', { silent = true })
 vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { silent = true })
