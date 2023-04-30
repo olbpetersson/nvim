@@ -47,6 +47,20 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- text objects for selection --
+  use({
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
+
+  -- variable high lighting --
+  use({
+    "nvim-treesitter/nvim-treesitter-refactor",
+    after = "nvim-treesitter",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
+
   -- colorscheme --
   use { "catppuccin/nvim", as = "catppuccin" }
 

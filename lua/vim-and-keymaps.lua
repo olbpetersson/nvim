@@ -4,6 +4,7 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
+vim.o.updatetime = 150
 
 vim.w.clipboard = unnamedplus
 
@@ -24,7 +25,7 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<A-o>', builtin.find_files, {})
 vim.keymap.set('n', '<A-gg>', builtin.git_files, {})
 vim.keymap.set('n', '<A-e>', builtin.buffers, {})
-vim.keymap.set('n', '<A-w>', function()
+vim.keymap.set('n', '<A-f>', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
