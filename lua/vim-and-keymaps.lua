@@ -39,6 +39,10 @@ vim.keymap.set('n','<A-S-q>', ':BufferRestore<CR>', { silent = true })
 
 -- lsp-zero / null-ls / lsp --
 vim.keymap.set('n', '<C-p>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.keymap.set('n', '<C-b>', '<cmd>lua vim.lsp.buf.definition()<CR>')
+vim.keymap.set('n', '<A-CR>', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+vim.keymap.set('n', '<A-r>', '<cmd>lua vim.lsp.buf.rename()<CR>')
+vim.keymap.set('n', '<A-7>', '<cmd>lua vim.lsp.buf.references()<CR>')
 
 -- custom --
 vim.keymap.set('n', '<C-s>', ':w<CR>', { silent = true })
@@ -57,4 +61,6 @@ vim.keymap.set('n', '<A-S-Up>', ':m .-2<CR>', { silent = true })
 vim.keymap.set('n', '<A-S-Down>', ':m .+1<CR>', { silent = true })
 vim.keymap.set('v', '<A-S-Up>', ':m .-2<CR>', { silent = true })
 vim.keymap.set('v', '<A-S-Down>', ':m .+1<CR>', { silent = true })
+vim.keymap.set('v', '<A-C-Left>', '<C-o>', { silent = true })
+vim.keymap.set('v', '<A-C-Right>', '<C-i>', { silent = true })
 
