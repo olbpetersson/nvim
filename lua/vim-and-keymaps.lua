@@ -104,8 +104,8 @@ vim.keymap.set('n', '<A-;>', ':vsplit <Cr>', { silent = true })
 
 vim.keymap.set('n', '<A-S-Up>', ':m .-2<CR>', { silent = true })
 vim.keymap.set('n', '<A-S-Down>', ':m .+1<CR>', { silent = true })
-vim.keymap.set('v', '<A-S-Up>', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', '<A-S-Down>', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', '<A-S-Down>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', '<A-S-Up>', ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', '<A-C-Left>', '<C-o>', { silent = true })
 vim.keymap.set('n', '<A-C-Right>', '<C-i>', { silent = true })
