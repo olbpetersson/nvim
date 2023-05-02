@@ -109,4 +109,6 @@ vim.keymap.set('v', '<A-S-Down>', ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', '<A-C-Left>', '<C-o>', { silent = true })
 vim.keymap.set('n', '<A-C-Right>', '<C-i>', { silent = true })
+vim.keymap.set({'v', 'i'}, '<A-C-Left>', '<Esc><C-o>i', { silent = true })
+vim.keymap.set({'v', 'i'}, '<A-C-Right>', '<Esc><C-i>i', { silent = true })
 
