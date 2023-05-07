@@ -7,9 +7,14 @@ end)
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
 require('telescope').setup{
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  },
   defaults = {
     file_ignore_patterns = {
-      "node_modules"
+      "node_modules", ".git"
     }
   }
 }

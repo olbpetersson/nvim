@@ -90,7 +90,7 @@ vim.keymap.set("x", "<Alt-p>", [["_dP]])
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-vim.keymap.set('n', '<C-s>', ':w<CR>', { silent = true })
+vim.keymap.set('n', '<C-s>', ':w<CR><Esc>', { silent = true })
 vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { silent = true })
 vim.keymap.set('n', '<C-q>', ':q<CR>', { silent = true })
 
