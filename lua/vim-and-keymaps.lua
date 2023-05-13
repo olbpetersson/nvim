@@ -78,6 +78,8 @@ vim.keymap.set('n', '<C-b>', '<cmd>lua vim.lsp.buf.definition()<CR>')
 vim.keymap.set('n', '<A-CR>', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 vim.keymap.set('n', '<A-r>', '<cmd>lua vim.lsp.buf.rename()<CR>')
 vim.keymap.set('n', '<A-7>', '<cmd>lua vim.lsp.buf.references()<CR>')
+vim.keymap.set('n', '<A-d>', '<cmd>lua vim.diagnostic.goto_next()<CR>')
+vim.keymap.set('n', '<A-S-d>', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 
 -- custom --
 vim.g.mapleader = ' '

@@ -140,11 +140,6 @@ return require('packer').startup(function(use)
     event = "InsertEnter",
   }
 
-  -- multi-line visual editing --
-  use {
-    'mg979/vim-visual-multi',
-  }
-
   -- surround --
   use({
       "kylechui/nvim-surround",
