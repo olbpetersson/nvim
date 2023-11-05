@@ -10,6 +10,7 @@ require('nvim-treesitter.configs').setup {
     enable = true
   },
   ensure_installed = {
+    'kotlin',
     'javascript',
     'typescript',
     'tsx',
