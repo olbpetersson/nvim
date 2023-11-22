@@ -52,15 +52,14 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 -- nvim-tree --
 vim.keymap.set("n", "<A-o>", ":NvimTreeToggle<CR>", { silent = true})
 
-vim.keymap.set("n", "<A-1>", ":NvimTreeFindFileToggle<CR>", { silent = true })
+vim.keymap.set("n", "<A-1>", ":NvimTreeFindFile<CR>", { silent = true })
 
 -- telescope --
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<A-n>', builtin.find_files, {})
-vim.keymap.set('n', '<A-gg>', builtin.git_files, {})
 vim.keymap.set('n', '<A-e>', builtin.buffers, {})
 vim.keymap.set('n', '<A-f>', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+	builtin.live_grep()
 end)
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
