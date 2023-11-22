@@ -75,6 +75,7 @@ return require('packer').startup(function(use)
     },
     config = function()
       require("nvim-tree").setup {
+        sync_root_with_cwd = true,
         filters = {
           exclude = { "node_modules" }
         }
